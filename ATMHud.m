@@ -17,6 +17,7 @@
 #import "ATMHudDelegate.h"
 #import "ATMSoundFX.h"
 #import "ATMHudQueueItem.h"
+#import "BlocksKit.h"
 
 @interface ATMHud (Private)
 - (void)construct;
@@ -243,12 +244,16 @@
 	[__view update];
 }
 
-- (void)hide {
-	[__view hide];
+- (void)hideAfter:(NSTimeInterval)delay {
+	[self hideAfter:delay onCompletion:nil];
 }
 
-- (void)hideAfter:(NSTimeInterval)delay {
-	[self performSelector:@selector(hide) withObject:nil afterDelay:delay];
+- (void)hideAfter:(NSTimeInterval)delay onCompletion:(void (^)(void))completion {
+    [NSObject performBlock:^{
+        [self hide];
+        if (completion)
+            completion();
+    } afterDelay:delay];
 }
 
 #pragma mark -
