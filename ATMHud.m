@@ -244,6 +244,10 @@
 	[__view update];
 }
 
+-(void)hide {
+    [__view hide];
+}
+
 - (void)hideAfter:(NSTimeInterval)delay {
 	[self hideAfter:delay onCompletion:nil];
 }
