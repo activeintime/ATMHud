@@ -1,2 +1,2 @@
-platform :ios, '5.0'
-pod 'BlocksKit', '~> 1.8.3'
+platform :ios, '6.0'
+pod 'BlocksKit', '~> 2.2.2'
