@@ -253,7 +253,7 @@
 }
 
 - (void)hideAfter:(NSTimeInterval)delay onCompletion:(void (^)(void))completion {
-    [NSObject performBlock:^{
+    [NSObject bk_performBlock:^{
         [self hide];
         if (completion)
             completion();
