@@ -37,10 +37,10 @@
 	s.origin.y -= 1;
 	
 	[[UIColor blackColor] set];
-	[caption drawInRect:f withFont:[UIFont boldSystemFontOfSize:14] lineBreakMode:UILineBreakModeWordWrap alignment:UITextAlignmentCenter];
+	[caption drawInRect:f withFont:[UIFont boldSystemFontOfSize:14] lineBreakMode:(NSLineBreakMode)UILineBreakModeWordWrap alignment:(NSTextAlignment)UITextAlignmentCenter];
 	
 	[[UIColor whiteColor] set];
-	[caption drawInRect:s withFont:[UIFont boldSystemFontOfSize:14] lineBreakMode:UILineBreakModeWordWrap alignment:UITextAlignmentCenter];
+	[caption drawInRect:s withFont:[UIFont boldSystemFontOfSize:14] lineBreakMode:(NSLineBreakMode)UILineBreakModeWordWrap alignment:(NSTextAlignment)UITextAlignmentCenter];
 	
 	UIGraphicsPopContext();
 }

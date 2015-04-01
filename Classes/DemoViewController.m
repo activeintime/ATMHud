@@ -308,7 +308,7 @@
 }
 
 - (void)positioningActionForRow:(NSUInteger)row {
-	[hud setAccessoryPosition:row];
+	[hud setAccessoryPosition:(ATMHudAccessoryPosition)row];
 	switch (row) {
 		case 0:
 			[hud setCaption:@"Position: Top"];
